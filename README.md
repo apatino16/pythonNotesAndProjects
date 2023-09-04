@@ -29,12 +29,33 @@ Why learn python?
 
 ### Dictionaries
 
-- [Dictionaries]()
+- [Dictionary]()
+
+### File Input and Output
+
+- [Files]()
+
+### Functions
 
 - [Functions]()
-- [Modules]()
-- [Files]()
+
+### Object Oriented Programming
+
 - [Classes]()
+
+### Modules and Packages
+
+- [Modules]()
+- [Packages]()
+- [APIs]()
+- [NumPy Module]()
+- [Pandas Module]()
+- [Matplotlib Module]()
+- [Python Database Modules]()
+
+### Regular Expressions
+
+- [Regular Expressions]()
 
 ## Sources
 

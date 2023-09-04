@@ -42,12 +42,13 @@ print("The lowest number in the list is: ", min_num)
 # General instructions
 print(f"Initialized count by typying a valid number. The machine will continue to add each valid number that you type. If you desire to exit the adding machine type 'quit'.")
 
+# Initialize the running total
 added_num = 0
 
 # Run until the user decides to quit
 while True:
 
-    num = input("Enter the first number: ")
+    num = input("Enter a number: ")
 
 # Checks if the user wants to quit
     if num.lower() == "quit":
@@ -57,17 +58,17 @@ while True:
 # Checks if the input is a valid number
     try:
         # Convert the input to a floating-point number to accept floating points and negative numbers
-        num = float(num)
+        num = float(num)  # Accept float numbers without raising an Error
     except ValueError:
         print("Please enter a valid number or 'quit'.")
         continue  # Skip the rest of the loop and ask for input again
 
      # Add the number to the running total
     added_num += num
-
-    print(f"The final addition was ", {added_num})
+    print("Running total:", added_num)
 
 # Problem 3
+
 
 # Problem 4
 
