@@ -129,6 +129,11 @@ print(filtered_list)
 
 # b. Comprehension version of 5a
 
+filtered_list_v2 = [item for item in current_list if not any(
+    char.isdigit() for char in item)]
+
+print(filtered_list_v2)
+
 # c.For loop that converts an arbitrary list of measurements in inches to meters
 
 # d. Comprehension version of 5b
