@@ -67,6 +67,7 @@ while True:
     added_num += num
     print("Running total:", added_num)
 
+
 # Problem 3
 
 # Nested loop that finds as many unique pairs of integer numbers whose product is 120
@@ -85,14 +86,34 @@ for a in range(1, 121):
 for pair in pairs:
     print(pair)
 
+
 # Problem 4
+
+# Floyd's Triangle
+
+# User specifies the number of rows
+num_rows = int(input("Enter the number of rows for Floyd's Triangle: "))
+
+# Initialized variable that tracks the current number
+current_num = 1
+
+# Outer loop for rows, running from 1 to the specified number of rows
+for row in range(1, num_rows + 1):
+    # Inner loop for columns in each row, running from 1 to the current row number
+    for column in range(1, row + 1):
+        # end=" " controls the character that separates the printed items, a space is used to create the horizontal layout of numbers in the triangle.
+        print(current_num, end=" ")
+        current_num += 1
+    # Move to the next line to start a new row
+    print()
+
 
 # Problem 5
 
-# a.
+# a. Filter out strings that contains numbers
 
-# b.
+# b. Comprehension version of 5a
 
-# c.
+# c.For loop that converts an arbitrary list of measurements in inches to meters
 
-# d.
+# d. Comprehension version of 5b
