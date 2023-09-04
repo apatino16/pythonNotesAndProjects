@@ -69,6 +69,21 @@ while True:
 
 # Problem 3
 
+# Nested loop that finds as many unique pairs of integer numbers whose product is 120
+
+# Initialized an empty list to store the pairs of integers
+pairs = []
+
+# Iterate through values of 'a' from 1 to 120
+for a in range(1, 121):
+    # Iterate through values of 'b' from 'a' to 120
+    for b in range(1, 121):
+        if a * b == 120 and a <= b:  # Checks that the product is 120 and a <= b to avoid permutations
+            pairs.append((a, b))  # Append the pair (a, b) to the 'pairs' list
+
+# Print the unique pairs
+for pair in pairs:
+    print(pair)
 
 # Problem 4
 

@@ -86,3 +86,51 @@ for num in num_list:
 # Print the lowest number found in the list
 print("The lowest number in the list is: ", min_num)
 ```
+
+## Nested Loops
+
+- Nested loops are loops that are placed inside other loops
+- The nested loop consists of an outer loop and one or more inner loops
+  - Outer Loop: The outer loop is responsible for controlling the execution of the inner loop(s). It runs from its starting point to its ending point, and each time it iterates, it triggers the inner loop(s).
+  - Inner Loop(s): The inner loop(s) are executed once for each iteration of the outer loop. They have their own loop variables and control structures. The inner loop(s) complete their full cycle for each iteration of the outer loop.
+- Nested loops are used to work with:
+  - multi-dimensional data structures (matrices or grids)
+  - examine combinations
+  - permutations of elements from different collections
+
+Standard and most common nested loop syntax:
+
+```
+for outer_variable in outer_range:
+    # Outer loop code
+
+    for inner_variable in inner_range:
+        # Inner loop code
+
+```
+
+Components breakdown:
+
+- `for outer_variable in outer_range:`: This is the outer loop declaration. It specifies the loop variable (outer_variable) and the range or iterable (outer_range) that the outer loop will iterate over.
+- `# Outer loop code`: This is the code block that is executed for each iteration of the outer loop. You can place any statements or code inside this block.
+- `for inner_variable in inner_range:`: This is the inner loop declaration. It specifies the loop variable (inner_variable) and the range or iterable (inner_range) that the inner loop will iterate over.
+- `# Inner loop code`: This is the code block that is executed for each iteration of the inner loop. It is placed inside the outer loop, so it will run for each combination of the outer loop and inner loop.
+
+Example of a nested loop that finds as many unique pairs of integer numbers whose product is 120:
+
+```
+# Initialized an empty list to store the pairs of integers
+pairs = []
+
+# Iterate through values of 'a' from 1 to 120
+for a in range(1, 121):
+    # Iterate through values of 'b' from 'a' to 120
+    for b in range(1, 121):
+        if a * b == 120 and a <= b:  # Checks that the product is 120 and a <= b to avoid permutations
+            pairs.append((a, b))  # Append the pair (a, b) to the 'pairs' list
+
+# Print the unique pairs
+for pair in pairs:
+    print(pair)
+
+```
