@@ -112,6 +112,21 @@ for row in range(1, num_rows + 1):
 
 # a. Filter out strings that contains numbers
 
+current_list = ["Python", "1234", "4Sep23", "JavaScript", "2023", "React"]
+
+# Initialized a list that stores the strings without numbers
+filtered_list = []
+
+# Iterate through the items in the current_list
+for item in current_list:
+    # Checks if there are any digits (numbers) present
+    if not any(char.isdigit() for char in item):
+        # If there are no digits it appends the item to the filtered_list
+        filtered_list.append(item)
+
+# Prints only the strings in the list
+print(filtered_list)
+
 # b. Comprehension version of 5a
 
 # c.For loop that converts an arbitrary list of measurements in inches to meters
