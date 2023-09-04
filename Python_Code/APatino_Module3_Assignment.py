@@ -152,3 +152,7 @@ for inch in inches_list:
 print(meters_list)
 
 # d. Comprehension version of 5b
+
+meters_list_v2 = [inch/39.37 for inch in inches_list]
+
+print(meters_list_v2)
