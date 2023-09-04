@@ -136,4 +136,19 @@ print(filtered_list_v2)
 
 # c.For loop that converts an arbitrary list of measurements in inches to meters
 
+# Initialized list with a set of merasurements in inches
+inches_list = [500, 330, 200, 600, 400, 999, 255, 39.37]
+
+meters_list = []
+
+# Iterate through the measurements in inches in the list of inches
+for inch in inches_list:
+    # Converts each measurement from inches to meters by divinding it by 39.37
+    meter = inch / 39.37
+    # Appends each value to a list of measurements in meters
+    meters_list.append(meter)
+
+# Prints the list which contains the measurements converted to meters
+print(meters_list)
+
 # d. Comprehension version of 5b
