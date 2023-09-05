@@ -63,6 +63,16 @@
 
 ## Dictionary Iteration
 
+- Iteration by Keys
+  - retrive value with the key using indexing
+    `value = dictionary[key]`
+- Iteration by Values
+- Dictionaries by Items
+  - items() returns an iterable of key-value tuples
+- Dictionary Comprehension
+  - Uses key-value pair for the item expression
+    `{key: value for item in iterable if cond_expr}`
+
 ## Default Dictionaries and Counter
 
 ## Nested Containers
