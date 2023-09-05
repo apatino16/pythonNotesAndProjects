@@ -1,5 +1,43 @@
 # Dictionaries
 
+- Dictionaries are containers of unique key-value pairs
+  - keys are unique and can be strings, numbers or tuples (immutable)
+  - Values can be any type
+- Dictionaries are not sequences but are iterable
+- Dictionaries are used for mapping, counting, accumulating, categorizing
+
+### Dictionary Literals
+
+- Surrounded by curly braces `{ }`
+- items are key-value pairs separated by a colon `;`
+  `key: value`
+- items are separated by a comma `,`
+- An empty dictionary `{ }`
+
+### Dictionary Function
+
+`dict( )`
+
+- return an empty dictionary
+
+### Dictionary Operators
+
+- Index
+  `d[key]`
+  - return a value associuated with key
+  - if the key does not exist, a KeyError exception is thrown
+- Assignment
+  d[key] = value
+  - if key exists, update key's value to value
+  - if key does not exist, add a new key-value item
+- Membership
+  `key in d`
+  - return Boolena on weather key exists as a key in d
+- Delete
+  `del d[key]`
+  - delete item with key
+  - KeyError if not found
+
 ## Dictionary Methods
 
 ## Dictionary Iteration
@@ -39,17 +77,17 @@
 
 ## Set Operators
 
-- equality operator
-
 ` set1 == set2`
 
-- inequlity operator
+- equality operator
 
 `set1 != set2`
 
-- membership operator
+- inequlity operator
 
 `item in set2`
+
+- membership operator
 
 ## Set Methods
 
