@@ -16,7 +16,7 @@ In Python, an object is a chunk of data that contains at least the following: - 
 | Integer        | int       | int      | 47, 2500, 25_000                                        |                 |
 | Floating Point | float     | no       | 3.14, 2.7e5                                             |                 |
 | Complex        | complex   | no       | 3j, 5 + 9j                                              |                 |
-| Text String    | str       | no       | "hello", 'helo', "'Hello'"                              |                 |
+| Text String    | str       | no       | "hello", 'hello', "'Hello'"                             |                 |
 | List           | list      | yes      | ["Carrots", "Onions", "Lettuce"]                        |                 |
 | Tuple          | tuple     | no       | (2, 3, 4)                                               |                 |
 | Bytes          | bytes     | no       | b'ab\xff'                                               |                 |
