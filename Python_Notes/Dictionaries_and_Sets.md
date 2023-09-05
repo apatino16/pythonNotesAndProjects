@@ -40,6 +40,27 @@
 
 ## Dictionary Methods
 
+- Length Function
+  `len(dict)`
+  - return the number of items in dict
+- Content Methods
+  - Access dictioinary items, keys or values
+  - Return a view object
+    - Dynamic view of a dictionary's items
+    - Conntainer and iterable
+  - 3 content methods
+    - `dict.key()` return a view object of keys in dict
+    - `dict.values()` return a view object of val;ues in dict
+    - `dict.items()` return a view object of items (key-value pairs) in dict
+- Manipulation Methods
+  - `dict.clear()` delete all items in dict
+  - `dict.update(dict2)` merge dict2 with dict; duplicate key items overwritten by dict2
+  - `dict.copy()` return a copy of dict
+- Get Method
+  - `dict.get(key, default= None)`
+  - return the values of key in dict
+  - if key doesn't exist return default instead
+
 ## Dictionary Iteration
 
 ## Default Dictionaries and Counter
