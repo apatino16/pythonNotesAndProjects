@@ -1,14 +1,26 @@
+# Iteration
+
+Iteration is a repetition of a process.
+
+- Loops are control structures for codeblock iteration
+
 ## While Loop:
 
 - A while loop is used when you want to repeatedly execute a block of code as long as a specified condition is true.
-- It's important to initialize any variables used in the condition before the loop starts.
-- You must include code within the loop that eventually changes the condition so that the loop will terminate; otherwise, you may end up with an infinite loop.
 - A while loop can be useful when you don't know in advance how many iterations you'll need.
+- It's important to initialize any variables used in the condition before the loop starts.
+- Boolean expression determines the execution of a codeblock
+- Repeatedly execute codeblock when the expression is `True`
+- Stop iterating when the expression is `False`
+- You must include code within the loop that eventually changes the condition so that the loop will terminate; otherwise, you may end up with an infinite loop.
 
 The syntax of a while loop in Python is as follows:
 
 ```
-while condition:
+while boolean_exp:
+
+    codeblock
+
     # Code to be executed as long as the condition is True
     # This code block is indented and continues until the condition becomes False
     # You can have multiple statements inside the loop
@@ -18,7 +30,7 @@ while condition:
 components Breakdown:
 
 - `while`: This keyword is used to start a while loop.
-- `condition`: This is the condition that is evaluated before each iteration of the loop. If the condition is True, the loop continues to execute; if it becomes False, the loop terminates.
+- `boolean_exp`: This is the condition that is evaluated before each iteration of the loop. If the condition is True, the loop continues to execute; if it becomes False, the loop terminates.
 - `:` (colon): It signifies the start of a new block of code, and all statements inside the loop must be indented to the same level.
 
 Example of a while loop in Python that prints the highest number from a list:
