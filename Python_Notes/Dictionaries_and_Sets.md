@@ -113,6 +113,22 @@
 
 ## Nested Containers
 
+- Nested containers are containers that have containers as items
+- Nesting indicates the depth of the containers
+  - Nested Lists
+  - Nested Dictionary
+    - Dictionary of lists
+    - dictionary of dictionaries
+  - Nested Indexing
+    - Access parts of a nested container
+    - Consists of a series of index operators
+      ` variable = [ [ [ ... ] ] ]`
+      `variable[a][b][c]`
+- Nested container Iteration
+  - With nested containers. accessing every element requires nested iteration
+  - An iteration for every level of nesting
+  - Each item is handed off to the next level for further iteration
+
 # Sets
 
 - Sets are containers of unique items
