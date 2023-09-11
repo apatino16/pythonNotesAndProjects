@@ -95,3 +95,39 @@ result = [[len(word) for word in sublist] for sublist in input_list]
 print(result)
 
 # Problem 5
+
+dict_list = [{'name': 'Lisa', 'score': 93},
+             {'name': 'Jeff', 'score': 85},
+             {'name': 'Elon', 'score': 89},
+             {'name': 'Satya', 'score': 90},
+             {'name': 'Tim', 'score': 82}]
+
+# a. Average Score
+# Calculate the sum of scores
+total_score = sum(item['score'] for item in dict_list)
+
+# Calculate the average score
+average_score = total_score / len(dict_list)
+
+# Print the average score
+print(average_score)
+
+
+# b. Name of person with highest score
+
+# Initialize variables to store the highest score and corresponding name
+highest_score = float('-inf')  # Start with a very low value
+highest_score_name = None
+
+# Iterate through the list of dictionaries
+for item in dict_list:
+    name = item['name']
+    score = item['score']
+
+    # Check if the current score is higher than the highest score found so far
+    if score > highest_score:
+        highest_score = score
+        highest_score_name = name
+
+# Print the name of the person with the highest score
+print("The name of the person with the highest score:", highest_score_name)
