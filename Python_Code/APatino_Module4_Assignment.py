@@ -51,7 +51,32 @@ sentence = input("Write a sentence: ")
 result = str_to_word_count(sentence)
 print(result)
 
+
 # Problem 3
+# Combine 2 dictionaries into 1
+d1 = {'a': 1, 'b': 2, 'c': 3}
+d2 = {'a': 10, 'c': 30, 'f': 50}
+# Initialize an empty dictionary to store the combined result
+combined_dict = {}
+
+# Loop through the keys in the first dictionary (d1)
+for key in d1:
+    # Check if the key exists in the second dictionary (d2).
+    if key in d2:
+        # If it exists in both dictionaries, add their values together and store it in the result dictionary.
+        combined_dict[key] = d1[key] + d2[key]
+    else:
+        # If it exists only in d1, copy the value to the result dictionary
+        combined_dict[key] = d1[key]
+
+# Loop through the keys in the second dictionary (d2)
+for key in d2:
+    # Check if the key exists in the result dictionary
+    if key not in combined_dict:
+        # If it doesn't exist, copy the key and its value to the result dictionary.
+        combined_dict[key] = d2[key]
+
+print(combined_dict)
 
 # Problem 4
 
