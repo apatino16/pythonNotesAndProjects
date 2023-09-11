@@ -61,9 +61,9 @@ combined_dict = {}
 
 # Loop through the keys in the first dictionary (d1)
 for key in d1:
-    # Check if the key exists in the second dictionary (d2).
+    # Check if the key exists in the second dictionary (d2)
     if key in d2:
-        # If it exists in both dictionaries, add their values together and store it in the result dictionary.
+        # If it exists in both dictionaries, add their values together and store it in the result dictionary
         combined_dict[key] = d1[key] + d2[key]
     else:
         # If it exists only in d1, copy the value to the result dictionary
@@ -73,11 +73,25 @@ for key in d1:
 for key in d2:
     # Check if the key exists in the result dictionary
     if key not in combined_dict:
-        # If it doesn't exist, copy the key and its value to the result dictionary.
+        # If it doesn't exist, copy the key and its value to the result dictionary
         combined_dict[key] = d2[key]
 
 print(combined_dict)
 
 # Problem 4
+
+# Given a list of list containing strings, created a new list of lists containing the lenght of each string using nested comprehensions
+# Input list of lists
+input_list = [['C++', 'Java', 'Python', 'Swift'],
+              ['San Francisco', 'Berkeley', 'Oakland'],
+              ['Apple', 'Banana', 'Cherry', 'Dragonfruit', 'Grape']]
+
+# Create a new list of lists containing the length of each string
+# The outer list comprehension iterates over each sublist in input_list
+# The inner list comprehension iterates over each word (string) in the sublist and calculates the length of each word using len(word)
+result = [[len(word) for word in sublist] for sublist in input_list]
+
+# Print a list of lists with the lengths of the strings
+print(result)
 
 # Problem 5
