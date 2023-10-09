@@ -1,6 +1,8 @@
+import json
 # Problem 1
 
 try:
+
     # Open the file for reading
     with open('Python_Code/Module5_files/gettysburg.txt', 'r') as file:
 
@@ -25,7 +27,7 @@ try:
     print(f'Average length of words: {avg_word_length:.2f} characters')
     print(f'Number of lines: {num_lines}')  # Print the Number of lines
 
-# Handle Exceptions
+    # Handle Exceptions
 except FileNotFoundError:
     # Handle the case where the file was not found
     print("The file 'gettysburg.txt' was not found.")
@@ -116,3 +118,40 @@ with open('Python_Code/Module5_files/sf_buildings_conversion.csv', 'w', newline=
         writer.writerow(row)
 
 # Problem 4
+
+# Read the JSON data
+try:
+    with open('Python_Code/Module5_files/us_states_and_cities.json', 'r') as json_file:
+        data = json.load(json_file)
+except FileNotFoundError:
+    print("Error: The JSON file 'us_states_and_cities.json' was not found.")
+except json.JSONDecodeError:
+    print("Error: There was an issue decoding the JSON data.")
+else:
+
+    # Find the state with the most cities
+    max_state = ''
+    max_city_count = 0
+
+    for state, cities in data.items():
+        city_count = len(cities)
+        if city_count > max_city_count:
+            max_city_count = city_count
+            max_state = state
+    # Print the name of the state with the most cities and number of cities it has
+    print(
+        f'The state with the most cities is {max_state} with {max_city_count} cities.')
+
+    # Find the most common city name
+    city_counts = {}
+
+    for cities in data.values():
+        for city in cities:
+            city_counts[city] = city_counts.get(city, 0) + 1
+
+    most_common_city = max(city_counts, key=city_counts.get)
+    num_states_with_most_common_city = city_counts[most_common_city]
+
+    # Print the most common city name across the states and the number of states that have that city name
+    print(f'The most common city name is {most_common_city}')
+    print(f'It appears in {num_states_with_most_common_city} states.')
