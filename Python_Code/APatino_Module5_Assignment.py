@@ -89,6 +89,30 @@ except IOError:
 
 # Problem 3
 
-# Problem 4
+import csv
 
-# Problem 5
+# Read the CSV Data
+data = []
+with open('Python_Code/Module5_files/sf_buildings.csv', 'r') as csv_file:
+    reader = csv.DictReader(csv_file)
+    for row in reader:
+        data.append(row)
+
+# Remove the 'use' column
+for row in data:
+    del row['use']
+
+# Convert the height from feet to meters
+for row in data:
+    row['height'] = float(row['height']) * 0.3048
+# Write the new data to a new CSV file
+field_names = data[0].keys()
+
+with open('Python_Code/Module5_files/sf_buildings_conversion.csv', 'w', newline='') as new_csv_file:
+    writer = csv.DictWriter(new_csv_file, fieldnames=field_names)
+
+    writer.writeheader()
+    for row in data:
+        writer.writerow(row)
+
+# Problem 4
