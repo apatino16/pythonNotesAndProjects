@@ -32,15 +32,35 @@ class Rectangle:
 
 class Vehicle:
 
+    # Initializes a new instance of Vehicle with default values
     def __init__(self, nameV, speed):
-        self.nameV = nameV
-        self.odometer = 0
-        self.speed = speed
+        self.nameV = nameV  # Initialize the name of the vehicle
+        self.odometer = 0  # Initialize the odometer to 0 (total miles driven)
+        self.speed = speed  # Initialize the speed of the vehicle
 
+    # Simulates the vehicle driving for a given amount of time
     def drive(self, minutes):
+        # Calculate the distance traveled in the given time (minutes)
+        # Speed is in miles per hour, calculate distance based on time
         distance = (self.speed / 60) * minutes
-        self.odometer += distance
-        return distance
+        self.odometer += distance  # Update the odometer with the traveled distance
+        return distance  # Return the distance traveled in this trip
+
+
+# Vehicle Class Test
+# Instantiate Vehicle objects and test the class
+# Creating a car object with a speed of 60 miles per hour
+car1 = Vehicle("Car", 60)
+# Creating a van object with a speed of 45 miles per hour
+car2 = Vehicle("Van", 45)
+
+# Test driving the vehicles
+distance_traveled_car1 = car1.drive(30)  # Drive the car for 30 minutes
+distance_traveled_car2 = car2.drive(45)  # Drive the van for 45 minutes
+
+# Display the distance traveled and the updated odometer for each vehicle
+print(f"{car1.name} traveled {distance_traveled_car1} miles. Odometer: {car1.odometer} miles.")
+print(f"{car2.name} traveled {distance_traveled_car2} miles. Odometer: {car2.odometer} miles.")
 
 # Problem 3
 
