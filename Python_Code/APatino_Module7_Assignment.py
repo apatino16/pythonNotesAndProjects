@@ -21,9 +21,30 @@ class Rectangle:
         new_heigth = self.height + other.height
         return Rectangle(new_width, new_heigth)
 
+    # Override the comparison operators (<, >, <=, >=, ==, !=)
     # Problem 3: Overriding the < operator to compare rectangles' areas
     def __lt__(self, other):
         return self.area() < other.area()
+
+    # Problem 3: Override the <= operator to compare rectangles' areas
+    def __le__(self, other):
+        return self.area() <= other.area()
+
+    # Problem 3: Override the > operator to compare rectangles' areas
+    def __gt__(self, other):
+        return self.area() > other.area()
+
+    # Problem 3: Override the >= operator to compare rectangles' areas
+    def __ge__(self, other):
+        return self.area() >= other.area()
+
+    # Problem 3: Override the == operator to compare rectangles' areas
+    def __eq__(self, other):
+        return self.area() == other.area()
+
+    # Problem 3: Override the != operator to compare rectangles' areas
+    def __ne__(self, other):
+        return self.area() != other.area()
 
     # Problem 1: Generates and returns a description of the rectangle
     def description(self):
