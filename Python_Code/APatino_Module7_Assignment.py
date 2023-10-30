@@ -12,6 +12,9 @@ class Rectangle:
     def area(self):
         return self.width * self.height
 
+    def description(self):
+        print(f"The object's name is {self.name}, the x equals to {self.x} and the y equals to {self.y}. The width equalts to {self.width} and the heigth equalts to {self.height}, given this the area is equal to {self.area}")
+
 # Problem 2
 
 # Problem 3
