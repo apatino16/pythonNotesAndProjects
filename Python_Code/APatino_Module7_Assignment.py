@@ -30,6 +30,18 @@ class Rectangle:
 
 # Problem 2
 
+class Vehicle:
+
+    def __init__(self, nameV, speed):
+        self.nameV = nameV
+        self.odometer = 0
+        self.speed = speed
+
+    def drive(self, minutes):
+        distance = (self.speed / 60) * minutes
+        self.odometer += distance
+        return distance
+
 # Problem 3
 
 # Problem 4
