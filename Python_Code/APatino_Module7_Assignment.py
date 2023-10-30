@@ -19,7 +19,8 @@ class Rectangle:
     def __add__(self, other):
         new_width = self.width + other.width
         new_heigth = self.height + other.height
-        return Rectangle(new_width, new_heigth)
+        new_name = f"{self.name}_and_{other.name}"
+        return Rectangle(new_width, new_heigth, new_name)
 
     # Override the comparison operators (<, >, <=, >=, ==, !=)
     # Problem 3: Overriding the < operator to compare rectangles' areas
@@ -61,6 +62,33 @@ class Rectangle:
         self.y = new_y  # Updates the y-coordinate
         # Print confirmation of updated coordinates
         print(f"Coordinates updated to ({self.x}, {self.y})")
+
+# Testing the updated Rectangle class
+
+
+# Create two rectangles
+rect1 = Rectangle(10, 5, "Rectangle1", 2, 3)
+rect2 = Rectangle(20, 7, "Rectangle2", 5, 5)
+
+# Test addition of two rectangles
+rect3 = rect1 + rect2
+print("Result of adding rectangles 1 and 2:")
+print(rect3)
+
+# Test comparison of rectangles based on areas
+print("Comparison of rectangles based on areas:")
+# Check if area of rect1 is less than area of rect2
+print(f"Rectangle 1 area < Rectangle 2 area: {rect1 < rect2}")
+# Check if area of rect1 is equal to area of rect2
+print(f"Rectangle 1 area == Rectangle 2 area: {rect1 == rect2}")
+# Check if area of rect1 is not equal to area of rect2
+print(f"Rectangle 1 area != Rectangle 2 area: {rect1 != rect2}")
+# Check if area of rect1 greater than to area of rect2
+print(f"Rectangle 1 area > Rectangle 2 area: {rect1 > rect2}")
+# Check if area of rect1 is less than or equal to area of rect2
+print(f"Rectangle 1 area <= Rectangle 2 area: {rect1 <= rect2}")
+# Check if area of rect1 is greater than or equal to area of rect2
+print(f"Rectangle 1 area >= Rectangle 2 area: {rect1 >= rect2}")
 
 
 # Problem 2 and 4
