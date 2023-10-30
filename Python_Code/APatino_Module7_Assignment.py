@@ -51,6 +51,10 @@ class Rectangle:
         # Return a formatted string containing details of the rectangle
         return f"Name: {self.name}, Coordinates (x, y): ({self.x}, {self.y}), Width: {self.width}, Height: {self.height}, Area: {self.area()}"
 
+    # Problem 3: # Override the str() function to print rectangle details
+    def __str__(self):
+        return f"Name: {self.name}, Coordinates (x, y): ({self.x}, {self.y}), Width: {self.width}, Height: {self.height}, Area: {self.area()}"
+
     # Problem 1: Updates the coordinates of the rectangle to new values
     def change_coords(self, new_x, new_y):
         self.x = new_x  # Updates the x-coordinate
