@@ -91,19 +91,19 @@ print(f"Rectangle 1 area <= Rectangle 2 area: {rect1 <= rect2}")
 print(f"Rectangle 1 area >= Rectangle 2 area: {rect1 >= rect2}")
 
 
-# Problem 2 and 4
+# Problem 2
 
 class Vehicle:
 
-    # Initializes a new instance of Vehicle with default values
+    # Problem 2: Initializes a new instance of Vehicle with default values
     def __init__(self, nameV, speed):
         self.nameV = nameV  # Initialize the name of the vehicle
         self.odometer = 0  # Initialize the odometer to 0 (total miles driven)
         self.speed = speed  # Initialize the speed of the vehicle
 
-    # Simulates the vehicle driving for a given amount of time
+    # Problem 2: Simulates the vehicle driving for a given amount of time
     def drive(self, minutes):
-        # Calculate the distance traveled in the given time (minutes)
+        # Problem 2: Calculate the distance traveled in the given time (minutes)
         # Speed is in miles per hour, calculate distance based on time
         distance = (self.speed / 60) * minutes
         self.odometer += distance  # Update the odometer with the traveled distance
@@ -117,10 +117,63 @@ car1 = Vehicle("Car", 60)
 # Creating a van object with a speed of 45 miles per hour
 car2 = Vehicle("Van", 45)
 
-# Test driving the vehicles
+# Problem 2: Test driving the vehicles
 distance_traveled_car1 = car1.drive(30)  # Drive the car for 30 minutes
 distance_traveled_car2 = car2.drive(45)  # Drive the van for 45 minutes
 
-# Display the distance traveled and the updated odometer for each vehicle
+# Problem 2: Display the distance traveled and the updated odometer for each vehicle
 print(f"{car1.nameV} traveled {distance_traveled_car1} miles. Odometer: {car1.odometer} miles.")
 print(f"{car2.nameV} traveled {distance_traveled_car2} miles. Odometer: {car2.odometer} miles.")
+
+# Problem 4
+
+
+class Bicycle(Vehicle):
+
+    def __init__(self, name, speed, num_gears):
+        super().__init__(name, speed)
+        self.num_gears = num_gears  # Unique property for Bicycle
+
+    # Method unique to Bicycle
+    def pedal(self):
+        pass
+
+
+class Motorcycle(Vehicle):
+    def __init__(self, name, speed, fuel_capacity):
+        super().__init__(name, speed)
+        self.fuel_capacity = fuel_capacity  # Unique property for Motorcycle
+
+     # Method unique to Motorcycle
+    def start_emgine(self):
+        pass
+
+
+class Truck(Vehicle):
+    def __init__(self, name, speed, max_load_weight):
+        super().__init__(name, speed)
+        self.max_load_weight = max_load_weight  # Unique property for Truck
+
+    # Method unique to Truck
+    def load_cargo(self):
+        pass
+
+
+class Car(Vehicle):
+    def __init__(self, name, speed, fuel_type):
+        super().__init__(name, speed)
+        self.fuel_type = fuel_type  # Unique property for Car
+
+    # Method unique to Car
+    def refuel(self):
+        pass
+
+
+class Bus(Vehicle):
+    def __init__(self, name, speed, passenger_capacity):
+        super().__init__(name, speed)
+        self.passenger_capacity = passenger_capacity  # Unique property for Bus
+
+    # Method unique to Bus
+    def board_passenger(self):
+        pass
