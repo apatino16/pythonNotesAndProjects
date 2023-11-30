@@ -92,7 +92,6 @@ print(f"Rectangle 1 area >= Rectangle 2 area: {rect1 >= rect2}")
 
 
 # Problem 2
-
 class Vehicle:
 
     # Problem 2: Initializes a new instance of Vehicle with default values
